@@ -13,7 +13,7 @@ body #outputSection {
   justify-content: center;
   align-items: center;
 }
-body #outputSection output {
+body #outputSection div {
   border: 2px solid black;
   padding: 20px;
   padding-left: 40%;

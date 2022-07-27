@@ -14,4 +14,10 @@ const buttonMultiply = document.querySelector("#buttonMultiply");
 const buttonDivide = document.querySelector("#buttonDivide");
 const output = document.querySelector("output")
 
-output.value= 3;
+
+let currentValue = 0;
+
+buttonOne.addEventListener("click", () => {
+    currentValue = 1;
+})
+output.value = currentValue;
