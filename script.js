@@ -16,7 +16,7 @@ const buttonEquals =document.querySelector("#buttonEquals")
 const output = document.querySelector("output")
 
 
-let currentValue = 0;
+let primaryValue = 0;
 let secondaryValue =0;
 let isAddition = false;
 let isSubtraction = false;
@@ -26,21 +26,21 @@ let isDivision = false;
 
 
 buttonOne.addEventListener("click", () => {
-    if (currentValue >= 0) {
-        secondaryValue = buttonOne.value;
-        output.value = buttonOne.value;
+    if (primaryValue >= 0 && isAddition === true || isSubtraction === true || isMultiplication === true || isDivision === true) {
+        secondaryValue = secondaryValue + Number(buttonOne.value);
+        output.value = secondaryValue;
     } else {
-        currentValue = buttonOne.value;
-        output.value= buttonOne.value;
+        primaryValue = primaryValue + Number(buttonOne.value);
+        output.value= primaryValue;
     }
 })
 
 buttonTwo.addEventListener("click", () => {
-    if (currentValue >= 0) {
+    if (primaryValue >= 0 && isAddition === true || isSubtraction === true || isMultiplication === true || isDivision === true) {
         secondaryValue = buttonTwo.value;
         output.value = buttonTwo.value;
     } else {
-        currentValue = buttonTwo.value;
+        primaryValue = buttonTwo.value;
         output.value= buttonTwo.value;
     }
 })
@@ -49,5 +49,5 @@ buttonTwo.addEventListener("click", () => {
 
 
 buttonEquals.addEventListener("click", () =>{
-    output.value = currentValue;
+    output.value = primaryValue;
 })
