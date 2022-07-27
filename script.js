@@ -12,12 +12,23 @@ const buttonAdd = document.querySelector("#buttonAdd");
 const buttonSubtract = document.querySelector("#buttonSubtract");
 const buttonMultiply = document.querySelector("#buttonMultiply");
 const buttonDivide = document.querySelector("#buttonDivide");
+const buttonEquals =document.querySelector("#buttonEquals")
 const output = document.querySelector("output")
 
 
 let currentValue = 0;
+let previousValue =0;
+
+
 
 buttonOne.addEventListener("click", () => {
-    currentValue = 1;
+    currentValue = buttonOne.value;
 })
-output.value = currentValue;
+
+
+
+
+
+buttonEquals.addEventListener("click", () =>{
+    output.value = currentValue;
+})
