@@ -17,14 +17,33 @@ const output = document.querySelector("output")
 
 
 let currentValue = 0;
-let previousValue =0;
+let secondaryValue =0;
+let isAddition = false;
+let isSubtraction = false;
+let isMultiplication = false;
+let isDivision = false;
 
 
 
 buttonOne.addEventListener("click", () => {
-    currentValue = buttonOne.value;
+    if (currentValue >= 0) {
+        secondaryValue = buttonOne.value;
+        output.value = buttonOne.value;
+    } else {
+        currentValue = buttonOne.value;
+        output.value= buttonOne.value;
+    }
 })
 
+buttonTwo.addEventListener("click", () => {
+    if (currentValue >= 0) {
+        secondaryValue = buttonTwo.value;
+        output.value = buttonTwo.value;
+    } else {
+        currentValue = buttonTwo.value;
+        output.value= buttonTwo.value;
+    }
+})
 
 
 
