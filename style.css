@@ -1,0 +1,48 @@
+body {
+  display: grid;
+  height: 100vh;
+}
+body #outputSection {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+body main {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 5;
+}
+body main #rowOne, body main #rowTwo, body main #rowThree {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+body main #rowOne {
+  padding-top: 90px;
+}
+body main #rowFour {
+  display: flex;
+  justify-content: space-evenly;
+}
+body main .button button {
+  padding: 40px;
+  border-radius: 10px;
+}
+body main .largeButton button {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 80px;
+  padding-right: 80px;
+  border-radius: 10px;
+}
+body footer {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}/*# sourceMappingURL=style.css.map */
