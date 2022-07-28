@@ -41,6 +41,7 @@ body main #rowFour {
 body main .button button {
   padding: 40px;
   border-radius: 10px;
+  font-size: 30px;
 }
 body main .largeButton button {
   padding-top: 20px;

@@ -27,7 +27,7 @@ let isDivision = false;
 
 
 buttonOne.addEventListener("click", () => {
-    if (primaryValue >= 0 && isAddition === true || isSubtraction === true || isMultiplication === true || isDivision === true) {
+    if (primaryValue.length > 0 && (isAddition === true || isSubtraction === true || isMultiplication === true || isDivision === true)) {
         secondaryValue = secondaryValue + buttonOne.value;
         output.value = secondaryValue;
     } else {
@@ -40,13 +40,14 @@ buttonOne.addEventListener("click", () => {
 //CLICK ON MULTI if (isAddition=false && isSubtraction = false && isDivision = false ){ isMultiplication = true}
 
 
-
-
 //create an if statement that will perform the operation according to which flag is set to true.
 //if (isAddition = true && secondaryValue > 0) { output.value = Number(primaryValue) + Number(secondayValue)}
 buttonEquals.addEventListener("click", () =>{
     if (primaryValue > 0) {
-        console.log(Number(primaryValue) + Number(primaryValue))
+        primaryValue = Number(primaryValue) + Number(primaryValue);
+        output.value = primaryValue;
+        primaryValue = primaryValue.toString();
+        console.log(primaryValue)
     }
     output.value = primaryValue;
 })
