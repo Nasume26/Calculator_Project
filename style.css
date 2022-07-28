@@ -87,6 +87,7 @@ body main .button #buttonEquals {
   color: white;
   font-weight: bolder;
   font-family: "Merriweather Sans", sans-serif;
+  padding-left: 60px;
 }
 body main .button #buttonMultiply, body main .button #buttonAdd, body main .button #buttonSubtract, body main .button #buttonDivide, body main .button #buttonDecimal {
   font-family: "Merriweather Sans", sans-serif;
@@ -98,6 +99,12 @@ body main .button #buttonMultiply:active, body main .button #buttonAdd:active, b
 }
 body main .button #buttonEquals:active {
   background-color: rgb(255, 0, 0);
+}
+body main .button #buttonDecimal {
+  padding-left: 55px;
+  padding-right: 55px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 body main .button button:active {
   background-color: rgb(142, 194, 249);
