@@ -14,7 +14,9 @@ const buttonMultiply = document.querySelector("#buttonMultiply");
 const buttonDivide = document.querySelector("#buttonDivide");
 const buttonEquals =document.querySelector("#buttonEquals")
 const output = document.querySelector("output")
+const numberButtons = document.querySelectorAll(".numberButton")
 
+console.log(numberButtons)
 
 let primaryValue = "";
 let secondaryValue = "";
@@ -23,18 +25,23 @@ let isSubtraction = false;
 let isMultiplication = false;
 let isDivision = false;
 
+for (let i = 0; i < numberButtons.length; i++) {
+    numberButtons[i].addEventListener("click", () => {
+        if (primaryValue.length > 0 && (isAddition === true || isSubtraction === true || isMultiplication === true || isDivision === true)) {
+            secondaryValue = secondaryValue + numberButtons[i].value;
+            output.value = secondaryValue;
+        } else {
+            primaryValue = primaryValue + numberButtons[i].value;
+            output.value= primaryValue;
+            console.log("success")
+        }
+    })
+}
+
+
 //Create a "stored data" output, so on secondary value area have another output box on top that displays Primary Value 
 
 
-buttonOne.addEventListener("click", () => {
-    if (primaryValue.length > 0 && (isAddition === true || isSubtraction === true || isMultiplication === true || isDivision === true)) {
-        secondaryValue = secondaryValue + buttonOne.value;
-        output.value = secondaryValue;
-    } else {
-        primaryValue = primaryValue + buttonOne.value;
-        output.value= primaryValue;
-    }
-})
 //Create button click events that set the subsequent operators flag to true.
 
 //CLICK ON MULTI if (isAddition=false && isSubtraction = false && isDivision = false ){ isMultiplication = true}
