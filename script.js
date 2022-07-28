@@ -136,4 +136,3 @@ clearButton.addEventListener("click", () => {
     memory.value = "";
 })
 
-//Create a Clear option that clears addition etx flags and sets the values back to ""

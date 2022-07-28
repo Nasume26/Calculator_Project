@@ -79,6 +79,11 @@ body main .button button {
   font-size: 30px;
   font-weight: bold;
   background-color: rgb(124, 11, 181);
+  border: 2px solid rgb(79, 10, 79);
+  box-shadow: 2px 2px purple;
+}
+body main .button button:active {
+  background-color: rgb(142, 194, 249);
 }
 body main .largeButton button {
   padding-top: 20px;
@@ -94,4 +99,19 @@ body footer {
   grid-row-end: 6;
   color: white;
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  body #outputsection {
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+  body main {
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+  body footer {
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
 }/*# sourceMappingURL=style.css.map */
