@@ -1,3 +1,8 @@
+* {
+  background-color: rgb(123, 34, 196);
+  font-family: "Montserrat", sans-serif;
+}
+
 body {
   display: grid;
   height: 100vh;
@@ -15,6 +20,12 @@ body #outputSection {
   align-items: center;
   padding-bottom: 10%;
 }
+body #outputSection output {
+  font-family: "Saira", sans-serif;
+  font-size: 25px;
+  color: rgb(7, 200, 7);
+  font-weight: bolder;
+}
 body #outputSection div {
   border: 2px solid black;
   padding: 20px;
@@ -26,6 +37,16 @@ body #outputSection div {
 body #clearButton {
   width: 100%;
   margin-top: 10px;
+  padding: 20px;
+  background-color: red;
+  border-radius: 10px;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 3px solid black;
+  border-right: 4px solid black;
+}
+body #clearButton:active {
+  background-color: rgb(70, 136, 136);
 }
 body main {
   grid-column-start: 1;
@@ -45,11 +66,14 @@ body main #rowOne {
 body main #rowFour {
   display: flex;
   justify-content: space-evenly;
+  padding-top: 20px;
 }
 body main .button button {
-  padding: 40px;
+  padding: 50px;
   border-radius: 10px;
   font-size: 30px;
+  font-weight: bold;
+  background-color: rgb(124, 11, 181);
 }
 body main .largeButton button {
   padding-top: 20px;

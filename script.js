@@ -17,7 +17,7 @@ const output = document.querySelector("#currentOutput");
 const memory = document.querySelector("#savedOutput");
 const numberButtons = document.querySelectorAll(".numberButton");
 const clearButton = document.querySelector("#clearButton");
-const decimalButton = document.querySelector("#decimalButton");
+const decimalButton = document.querySelector("#buttonDecimal");
 
 console.log(numberButtons)
 
@@ -74,17 +74,25 @@ buttonMultiply.addEventListener("click", () => {
     }
 })
 
+decimalButton.addEventListener("click", () => {
+    if (primaryValue.length > 0 && secondaryValue.length > 0 && secondaryValue.includes(".") === false && (isAddition === true || isDivision === true || isMultiplication === true || isSubtraction === true)){
+        secondaryValue = secondaryValue + ".";
+        output.value= secondaryValue;
+    } else if (secondaryValue.length <= 0 && primaryValue.length > 0 && secondaryValue.includes(".") === false && (isAddition === true || isDivision === true || isMultiplication === true || isSubtraction === true)) {
+        secondaryValue = "0."; 
+        output.value = secondaryValue;
+    } else if (primaryValue.length <= 0  && primaryValue.includes(".") === false && (isAddition === false || isDivision === false || isMultiplication === false || isSubtraction === false) ){
+        primaryValue= "0.";
+        output.value = primaryValue;
+    }else if (primaryValue.length > 0 && secondaryValue.length <= 0 && primaryValue.includes(".") === false && (isAddition === false || isDivision === false || isMultiplication === false || isSubtraction === false)) {
+        primaryValue = primaryValue + ".";
+        output.value = primaryValue;
+    } else {
+        output.value = "ERROR";
+        console.log(primaryValue.length)
+    }
+});
 
-//Create a "stored data" output, so on secondary value area have another output box on top that displays Primary Value 
-
-
-//Create button click events that set the subsequent operators flag to true.
-
-//CLICK ON MULTI if (isAddition=false && isSubtraction = false && isDivision = false ){ isMultiplication = true}
-
-
-//create an if statement that will perform the operation according to which flag is set to true.
-//if (isAddition = true && secondaryValue > 0) { output.value = Number(primaryValue) + Number(secondayValue)}
 buttonEquals.addEventListener("click", () =>{
     if (primaryValue > 0 && secondaryValue > 0 && isAddition === true) {
         primaryValue = parseFloat(primaryValue) + parseFloat(secondaryValue);
@@ -125,6 +133,7 @@ clearButton.addEventListener("click", () => {
     isMultiplication = false;
     isSubtraction = false;
     output.value = "";
+    memory.value = "";
 })
 
 //Create a Clear option that clears addition etx flags and sets the values back to ""
