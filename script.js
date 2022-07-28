@@ -97,30 +97,30 @@ buttonEquals.addEventListener("click", () =>{
     if (primaryValue > 0 && secondaryValue > 0 && isAddition === true) {
         primaryValue = parseFloat(primaryValue) + parseFloat(secondaryValue);
         memory.value = primaryValue;
+        output.value = primaryValue;
         primaryValue = primaryValue.toString();
         secondaryValue = "";
-        output.value = "";
         isAddition = false;
     } else if (primaryValue > 0 && secondaryValue > 0 && isMultiplication === true){
         primaryValue = parseFloat(primaryValue) * parseFloat(secondaryValue);
         memory.value = primaryValue;
+        output.value = primaryValue;
         primaryValue = primaryValue.toString();
         secondaryValue = "";
-        output.value = "";
         isMultiplication = false;
     } else if (primaryValue > 0 && secondaryValue > 0 && isDivision === true) {
         primaryValue = parseFloat(primaryValue) / parseFloat(secondaryValue);
         memory.value = primaryValue;
+        output.value = primaryValue;
         primaryValue = primaryValue.toString();
         secondaryValue = "";
-        output.value = "";
         isDivision =false
     } else if (primaryValue > 0 && secondaryValue > 0 && isSubtraction === true) {
         primaryValue = parseFloat(primaryValue) - parseFloat(secondaryValue);
         memory.value = primaryValue;
+        output.value = primaryValue;
         primaryValue = primaryValue.toString();
         secondayValue = "";
-        output.value = "";
         isSubtraction = false;
     }
 })

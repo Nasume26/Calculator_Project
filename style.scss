@@ -99,6 +99,27 @@ body {
                 box-shadow: 2px 2px purple;
             }
 
+            #buttonEquals {
+                background-color: rgb(64, 75, 228);
+                color: white;
+                font-weight: bolder;
+                font-family: 'Merriweather Sans', sans-serif;
+            }
+
+            #buttonMultiply, #buttonAdd, #buttonSubtract, #buttonDivide, #buttonDecimal {
+                font-family: 'Merriweather Sans', sans-serif;
+                background-color: rgb(8, 8, 92);
+                color: white;
+            }
+
+            #buttonMultiply:active, #buttonAdd:active, #buttonSubtract:active, #buttonDivide:active, #buttonDecimal:active {
+                background-color: rgb(56, 2, 2);
+            } 
+
+            #buttonEquals:active {
+                background-color: rgb(255, 0, 0);
+            }
+
             button:active {
                 background-color: rgb(142, 194, 249);
             }
