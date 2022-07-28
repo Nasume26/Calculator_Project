@@ -10,9 +10,9 @@ body #outputSection {
   border: 2px solid black;
   border-radius: 20px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 10%;
   padding-bottom: 10%;
 }
 body #outputSection div {
@@ -20,6 +20,12 @@ body #outputSection div {
   padding: 20px;
   padding-left: 40%;
   padding-right: 40%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+body #clearButton {
+  width: 100%;
+  margin-top: 10px;
 }
 body main {
   grid-column-start: 1;

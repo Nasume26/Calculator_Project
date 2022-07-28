@@ -11,10 +11,16 @@
     <!-- Output box, takes up the entire screen -->
     <div id="outputSection">
         <div>
-        <output></output>
+            <output id = "savedOutput"></output>
+        </div>
+        <div>
+        <output id="currentOutput"></output>
         </div>
     </div>
     <main>
+        <div id="rowClear">
+            <button id="clearButton">AC</button>
+        </div>
         <div id="rowOne">
             <div class="button">
                 <button id="buttonSeven" value="7" class = "numberButton">7</button>
@@ -58,13 +64,16 @@
             </div>
         </div>
         <div id="rowFour">
-            <div class="largeButton">
+            <div class="button">
                 <button id="buttonZero" value="0" class = "numberButton">0</button>
             </div>
-            <div class=" largeButton">
+            <div class=" button">
                 <button id="buttonAdd" value="+">+</button>
             </div>
-            <div class="largeButton">
+            <div class="button">
+                <button id="buttonDecimal">.</button>
+            </div>
+            <div class="button">
                 <button id="buttonEquals" value="=">=</button>
             </div>
         </div>
