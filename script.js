@@ -1,13 +1,4 @@
-// const buttonOne = document.querySelector("#buttonOne");
-// const buttonTwo= document.querySelector("#buttonTwo");
-// const buttonThree = document.querySelector("#buttonThree");
-// const buttonFour = document.querySelector("#buttonFour");
-// const buttonFive = document.querySelector("#buttonFive");
-// const buttonSix = document.querySelector("#buttonSix");
-// const buttonSeven = document.querySelector("#buttonSeven");
-// const buttonEight = document.querySelector("#buttonEight");
-// const buttonNine = document.querySelector("#buttonNine");
-// const buttonZero = document.querySelector("#buttonZero");
+// Button imports. imports all buttons and assigns them to variables.
 const buttonAdd = document.querySelector("#buttonAdd");
 const buttonSubtract = document.querySelector("#buttonSubtract");
 const buttonMultiply = document.querySelector("#buttonMultiply");
@@ -19,8 +10,7 @@ const numberButtons = document.querySelectorAll(".numberButton");
 const clearButton = document.querySelector("#clearButton");
 const decimalButton = document.querySelector("#buttonDecimal");
 
-console.log(numberButtons)
-
+//variables, flags and values.
 let primaryValue = "";
 let secondaryValue = "";
 let isAddition = false;
@@ -28,6 +18,7 @@ let isSubtraction = false;
 let isMultiplication = false;
 let isDivision = false;
 
+//main button loop. Determines which value needs to be edited for every single number button.
 for (let i = 0; i < numberButtons.length; i++) {
     numberButtons[i].addEventListener("click", () => {
         if (primaryValue.length > 0 && (isAddition === true || isSubtraction === true || isMultiplication === true || isDivision === true)) {
@@ -37,11 +28,12 @@ for (let i = 0; i < numberButtons.length; i++) {
         } else {
             primaryValue = primaryValue + numberButtons[i].value;
             output.value= primaryValue;
-            console.log("success")
         }
     })
 }
 
+
+//operator flags. Determines if a flag has already been set to true and that primaryValue contains a value. If theres a value and all Operator flags are false it sets the coresponding flag to  true.
 buttonAdd.addEventListener("click", () => {
     if (primaryValue.length > 0 && isAddition === false && isDivision === false && isMultiplication === false && isSubtraction === false) {
         isAddition = true;
@@ -73,7 +65,7 @@ buttonMultiply.addEventListener("click", () => {
         output.value = "X"
     }
 })
-
+//decimal button, makes sure there is not already a decimal present, automatically creates a 0 before the decimal if not value is present in the selected variable, and selects the correct value to add the decimal to.
 decimalButton.addEventListener("click", () => {
     if (primaryValue.length > 0 && secondaryValue.length > 0 && secondaryValue.includes(".") === false && (isAddition === true || isDivision === true || isMultiplication === true || isSubtraction === true)){
         secondaryValue = secondaryValue + ".";
@@ -89,10 +81,9 @@ decimalButton.addEventListener("click", () => {
         output.value = primaryValue;
     } else {
         output.value = "ERROR";
-        console.log(primaryValue.length)
     }
 });
-
+//Equals button, all calculations are processed here.
 buttonEquals.addEventListener("click", () =>{
     if (primaryValue > 0 && secondaryValue > 0 && isAddition === true) {
         primaryValue = parseFloat(primaryValue) + parseFloat(secondaryValue);
@@ -124,7 +115,7 @@ buttonEquals.addEventListener("click", () =>{
         isSubtraction = false;
     }
 })
-
+//clear button, clears all variables and resets the calculator.
 clearButton.addEventListener("click", () => {
     primaryValue = "";
     secondaryValue = "";
