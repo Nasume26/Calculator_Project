@@ -1,6 +1,6 @@
 * {
-  background-color: rgb(123, 34, 196);
-  font-family: "Montserrat", sans-serif;
+  background-color: #54636c;
+  font-family: "Ibarra Real Nova", serif;
 }
 
 body {
@@ -26,7 +26,7 @@ body #outputSection #divCurrentOutput {
 body #outputSection output {
   font-family: "Saira", sans-serif;
   font-size: 25px;
-  color: rgb(7, 200, 7);
+  color: rgb(135, 187, 187);
   font-weight: bolder;
 }
 body #outputSection div {
@@ -40,7 +40,7 @@ body #clearButton {
   width: 100%;
   margin-top: 10px;
   padding: 20px;
-  background-color: red;
+  background-color: #8F625D;
   border-radius: 10px;
   border-left: 1px solid black;
   border-top: 1px solid black;
@@ -51,7 +51,7 @@ body #clearButton {
   color: white;
 }
 body #clearButton:active {
-  background-color: rgb(70, 136, 136);
+  background-color: rgb(79, 63, 63);
 }
 body main {
   grid-column-start: 1;
@@ -76,29 +76,35 @@ body main #rowFour {
 body main .button button {
   padding: 50px;
   border-radius: 10px;
-  font-size: 30px;
+  font-size: 35px;
   font-weight: bold;
-  background-color: rgb(124, 11, 181);
-  border: 2px solid rgb(79, 10, 79);
-  box-shadow: 2px 2px purple;
+  background-color: #b5c3cf;
+  border: 2px solid #6e87a2;
+  box-shadow: 2px 2px #6e87a2;
 }
 body main .button #buttonEquals {
-  background-color: rgb(64, 75, 228);
+  background-color: #C3B28B;
   color: white;
   font-weight: bolder;
   font-family: "Merriweather Sans", sans-serif;
   padding-left: 60px;
+  border: 2px solid #b7a984;
+  box-shadow: 3px 3px #958762;
 }
 body main .button #buttonMultiply, body main .button #buttonAdd, body main .button #buttonSubtract, body main .button #buttonDivide, body main .button #buttonDecimal {
   font-family: "Merriweather Sans", sans-serif;
-  background-color: rgb(8, 8, 92);
-  color: white;
+  background-color: #DFDEDC;
+  color: black;
+  font-size: 40px;
+  border: 2px solid #b3b3b1;
+  box-shadow: 3px 3px #a5a5a5;
+  padding-bottom: 40px;
 }
 body main .button #buttonMultiply:active, body main .button #buttonAdd:active, body main .button #buttonSubtract:active, body main .button #buttonDivide:active, body main .button #buttonDecimal:active {
-  background-color: rgb(56, 2, 2);
+  background-color: #bdbcba;
 }
 body main .button #buttonEquals:active {
-  background-color: rgb(255, 0, 0);
+  background-color: #9b8d6e;
 }
 body main .button #buttonDecimal {
   padding-left: 55px;
@@ -107,7 +113,7 @@ body main .button #buttonDecimal {
   margin-right: 5px;
 }
 body main .button button:active {
-  background-color: rgb(142, 194, 249);
+  background-color: #99a7b3;
 }
 body main .largeButton button {
   padding-top: 20px;

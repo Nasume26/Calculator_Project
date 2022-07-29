@@ -1,12 +1,17 @@
 
 
-$primaryBackgroundColor: rgb(123, 34, 196);
-$buttonBackgroundColor: rgb(124, 11, 181);
-
+$primaryBackgroundColor: #54636c;
+$buttonBackgroundColor: #b5c3cf;
+$buttonBorderColor: #6e87a2;
+$buttonOperatorColor: #DFDEDC;
+$buttonClearColor: #8F625D;
+$buttonEqualsColor: #C3B28B;
+$buttonActiveColor: #99a7b3;
+$outputTextColor: rgb(135, 187, 187);
 
 * {
     background-color: $primaryBackgroundColor;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Ibarra Real Nova', serif;
 }
 
 
@@ -33,7 +38,7 @@ body {
         output {
             font-family: 'Saira', sans-serif;
             font-size: 25px;
-            color: rgb(7, 200, 7);
+            color: $outputTextColor;
             font-weight: bolder;
         }
         div {
@@ -49,7 +54,7 @@ body {
         width: 100%;
         margin-top: 10px;
         padding: 20px;
-        background-color: red;
+        background-color: $buttonClearColor;
         border-radius: 10px;
         border-left: 1px solid black;
         border-top: 1px solid black;
@@ -61,7 +66,7 @@ body {
     }
 
     #clearButton:active {
-        background-color: rgb(70, 136, 136);
+        background-color: rgb(79, 63, 63);
     }
 
     main{
@@ -92,33 +97,39 @@ body {
             button {
                 padding: 50px;
                 border-radius: 10px;
-                font-size: 30px;
+                font-size: 35px;
                 font-weight: bold;
                 background-color: $buttonBackgroundColor;
-                border: 2px solid rgb(79, 10, 79);
-                box-shadow: 2px 2px purple;
+                border: 2px solid $buttonBorderColor;
+                box-shadow: 2px 2px $buttonBorderColor;
             }
 
             #buttonEquals {
-                background-color: rgb(64, 75, 228);
+                background-color: $buttonEqualsColor;
                 color: white;
                 font-weight: bolder;
                 font-family: 'Merriweather Sans', sans-serif;
                 padding-left: 60px;
+                border: 2px solid #b7a984;
+                box-shadow: 3px 3px #958762;
             }
 
             #buttonMultiply, #buttonAdd, #buttonSubtract, #buttonDivide, #buttonDecimal {
                 font-family: 'Merriweather Sans', sans-serif;
-                background-color: rgb(8, 8, 92);
-                color: white;
+                background-color: $buttonOperatorColor;
+                color: black;
+                font-size: 40px;
+                border: 2px solid #b3b3b1;
+                box-shadow: 3px 3px #a5a5a5;
+                padding-bottom: 40px;
             }
 
             #buttonMultiply:active, #buttonAdd:active, #buttonSubtract:active, #buttonDivide:active, #buttonDecimal:active {
-                background-color: rgb(56, 2, 2);
+                background-color: #bdbcba;
             } 
 
             #buttonEquals:active {
-                background-color: rgb(255, 0, 0);
+                background-color: #9b8d6e;
             }
 
             #buttonDecimal {
@@ -129,7 +140,7 @@ body {
             }
 
             button:active {
-                background-color: rgb(142, 194, 249);
+                background-color: $buttonActiveColor;
             }
         }
 
