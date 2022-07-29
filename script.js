@@ -79,8 +79,6 @@ decimalButton.addEventListener("click", () => {
     }else if (primaryValue.length > 0 && secondaryValue.length <= 0 && primaryValue.includes(".") === false && (isAddition === false || isDivision === false || isMultiplication === false || isSubtraction === false)) {
         primaryValue = primaryValue + ".";
         output.value = primaryValue;
-    } else {
-        output.value = "ERROR";
     }
 });
 //Equals button, all calculations are processed here.
