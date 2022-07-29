@@ -17,6 +17,7 @@ let isAddition = false;
 let isSubtraction = false;
 let isMultiplication = false;
 let isDivision = false;
+console.log(primaryValue.length)
 
 //main button loop. Determines which value needs to be edited for every single number button.
 for (let i = 0; i < numberButtons.length; i++) {
@@ -69,47 +70,49 @@ buttonMultiply.addEventListener("click", () => {
 decimalButton.addEventListener("click", () => {
     if (primaryValue.length > 0 && secondaryValue.length > 0 && secondaryValue.includes(".") === false && (isAddition === true || isDivision === true || isMultiplication === true || isSubtraction === true)){
         secondaryValue = secondaryValue + ".";
-        output.value= secondaryValue;
-    } else if (secondaryValue.length <= 0 && primaryValue.length > 0 && secondaryValue.includes(".") === false && (isAddition === true || isDivision === true || isMultiplication === true || isSubtraction === true)) {
+        output.value = secondaryValue;
+        console.log(secondaryValue.length)
+    } else if (secondaryValue.length = "0" && primaryValue.length > 0 && secondaryValue.includes(".") === false && (isAddition === true || isDivision === true || isMultiplication === true || isSubtraction === true)){
         secondaryValue = "0."; 
         output.value = secondaryValue;
-    } else if (primaryValue.length <= 0  && primaryValue.includes(".") === false && (isAddition === false || isDivision === false || isMultiplication === false || isSubtraction === false) ){
+        console.log(secondaryValue.length)
+    } else if (primaryValue.length = "0"  && primaryValue.includes(".") === false && (isAddition === false || isDivision === false || isMultiplication === false || isSubtraction === false) ){
         primaryValue= "0.";
         output.value = primaryValue;
-    }else if (primaryValue.length > 0 && secondaryValue.length <= 0 && primaryValue.includes(".") === false && (isAddition === false || isDivision === false || isMultiplication === false || isSubtraction === false)) {
+    }else if (primaryValue.length > 0 && secondaryValue.length <= 0 && primaryValue.includes(".") === false && (isAddition === false || isDivision === false || isMultiplication === false || isSubtraction === false)){
         primaryValue = primaryValue + ".";
         output.value = primaryValue;
     }
 });
 //Equals button, all calculations are processed here.
 buttonEquals.addEventListener("click", () =>{
-    if (primaryValue > 0 && secondaryValue > 0 && isAddition === true) {
+    if (primaryValue.length > 0 && secondaryValue.length > 0 && isAddition === true) {
         primaryValue = parseFloat(primaryValue) + parseFloat(secondaryValue);
         memory.value = primaryValue;
         output.value = primaryValue;
         primaryValue = primaryValue.toString();
         secondaryValue = "";
         isAddition = false;
-    } else if (primaryValue > 0 && secondaryValue > 0 && isMultiplication === true){
+    } else if (primaryValue.length > 0 && secondaryValue.length > 0 && isMultiplication === true){
         primaryValue = parseFloat(primaryValue) * parseFloat(secondaryValue);
         memory.value = primaryValue;
         output.value = primaryValue;
         primaryValue = primaryValue.toString();
         secondaryValue = "";
         isMultiplication = false;
-    } else if (primaryValue > 0 && secondaryValue > 0 && isDivision === true) {
+    } else if (primaryValue.length > 0 && secondaryValue.length > 0 && isDivision === true) {
         primaryValue = parseFloat(primaryValue) / parseFloat(secondaryValue);
         memory.value = primaryValue;
         output.value = primaryValue;
         primaryValue = primaryValue.toString();
         secondaryValue = "";
         isDivision =false
-    } else if (primaryValue > 0 && secondaryValue > 0 && isSubtraction === true) {
+    } else if (primaryValue.length > 0 && secondaryValue.length > 0 && isSubtraction === true) {
         primaryValue = parseFloat(primaryValue) - parseFloat(secondaryValue);
         memory.value = primaryValue;
         output.value = primaryValue;
         primaryValue = primaryValue.toString();
-        secondayValue = "";
+        secondaryValue = "";
         isSubtraction = false;
     }
 })
