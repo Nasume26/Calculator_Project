@@ -29,9 +29,9 @@ for (let i = 0; i < numberButtons.length; i++) {
         } else {
             primaryValue = primaryValue + numberButtons[i].value;
             output.value= primaryValue;
-        }
-    })
-}
+        };
+    });
+};
 
 
 //operator flags. Determines if a flag has already been set to true and that primaryValue contains a value. If theres a value and all Operator flags are false it sets the coresponding flag to  true.
@@ -39,50 +39,50 @@ buttonAdd.addEventListener("click", () => {
     if (primaryValue.length > 0 && isAddition === false && isDivision === false && isMultiplication === false && isSubtraction === false) {
         isAddition = true;
         memory.value = primaryValue;
-        output.value = "+"
-    }
-})
+        output.value = "+";
+    };
+});
 
 buttonSubtract.addEventListener("click", () => {
     if (primaryValue.length > 0 && isAddition === false && isDivision === false && isMultiplication === false && isSubtraction === false) {
         isSubtraction = true;
         memory.value = primaryValue;
-        output.value = "-"
-    }
-})
+        output.value = "-";
+    };
+});
 
 buttonDivide.addEventListener("click", () => {
     if (primaryValue.length > 0 && isAddition === false && isDivision === false && isMultiplication === false && isSubtraction === false) {
         isDivision = true;
         memory.value = primaryValue;
-        output.value = "÷"
-    }
-})
+        output.value = "÷";
+    };
+});
 
 buttonMultiply.addEventListener("click", () => {
     if (primaryValue.length > 0 && isAddition === false && isDivision === false && isMultiplication === false && isSubtraction === false) {
         isMultiplication = true;
         memory.value = primaryValue;
-        output.value = "×"
-    }
-})
+        output.value = "×";
+    };
+});
 //decimal button, makes sure there is not already a decimal present, automatically creates a 0 before the decimal if not value is present in the selected variable, and selects the correct value to add the decimal to.
 decimalButton.addEventListener("click", () => {
     if (primaryValue.length > 0 && secondaryValue.length > 0 && secondaryValue.includes(".") === false && (isAddition === true || isDivision === true || isMultiplication === true || isSubtraction === true)){
         secondaryValue = secondaryValue + ".";
         output.value = secondaryValue;
-        console.log(secondaryValue.length)
+        console.log(secondaryValue.length);
     } else if (secondaryValue.length <= 0 && primaryValue.length > 0 && secondaryValue.includes(".") === false && (isAddition === true || isDivision === true || isMultiplication === true || isSubtraction === true)){
         secondaryValue = "0."; 
         output.value = secondaryValue;
-        console.log(secondaryValue.length)
+        console.log(secondaryValue.length);
     } else if (primaryValue.length <= 0  && primaryValue.includes(".") === false && (isAddition === false || isDivision === false || isMultiplication === false || isSubtraction === false) ){
         primaryValue= "0.";
         output.value = primaryValue;
     }else if (primaryValue.length > 0 && secondaryValue.length <= 0 && primaryValue.includes(".") === false && (isAddition === false || isDivision === false || isMultiplication === false || isSubtraction === false)){
         primaryValue = primaryValue + ".";
         output.value = primaryValue;
-    }
+    };
 });
 //Equals button, all calculations are processed here.
 buttonEquals.addEventListener("click", () =>{
@@ -106,7 +106,7 @@ buttonEquals.addEventListener("click", () =>{
         output.value = primaryValue;
         primaryValue = primaryValue.toString();
         secondaryValue = "";
-        isDivision =false
+        isDivision =false;
     } else if (primaryValue.length > 0 && secondaryValue.length > 0 && isDivision === true && (primaryValue === "0" || secondaryValue === "0")){
         output.value = " ERROR: Can not divide by Zero";
         memory.value= "";
@@ -120,8 +120,8 @@ buttonEquals.addEventListener("click", () =>{
         primaryValue = primaryValue.toString();
         secondaryValue = "";
         isSubtraction = false;
-    }
-})
+    };
+});
 //clear button, clears all variables and resets the calculator.
 clearButton.addEventListener("click", () => {
     primaryValue = "";
@@ -132,5 +132,5 @@ clearButton.addEventListener("click", () => {
     isSubtraction = false;
     output.value = "";
     memory.value = "";
-})
+});
 
