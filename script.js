@@ -100,14 +100,20 @@ buttonEquals.addEventListener("click", () =>{
         primaryValue = primaryValue.toString();
         secondaryValue = "";
         isMultiplication = false;
-    } else if (primaryValue.length > 0 && secondaryValue.length > 0 && isDivision === true) {
+    } else if (primaryValue.length > 0 && secondaryValue.length > 0 && isDivision === true && primaryValue !== "0" && secondaryValue !== "0") {
         primaryValue = parseFloat(primaryValue) / parseFloat(secondaryValue);
         memory.value = primaryValue;
         output.value = primaryValue;
         primaryValue = primaryValue.toString();
         secondaryValue = "";
         isDivision =false
-    } else if (primaryValue.length > 0 && secondaryValue.length > 0 && isSubtraction === true) {
+    } else if (primaryValue.length > 0 && secondaryValue.length > 0 && isDivision === true && (primaryValue !== "0" || secondaryValue === "0")){
+        output.value = " ERROR: Can not divide by Zero";
+        memory.value= "ERROR";
+        primaryValue = "";
+        secondaryValue = "";
+        isDivision = false;
+    }else if (primaryValue.length > 0 && secondaryValue.length > 0 && isSubtraction === true) {
         primaryValue = parseFloat(primaryValue) - parseFloat(secondaryValue);
         memory.value = primaryValue;
         output.value = primaryValue;
