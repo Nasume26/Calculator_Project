@@ -55,7 +55,7 @@ buttonDivide.addEventListener("click", () => {
     if (primaryValue.length > 0 && isAddition === false && isDivision === false && isMultiplication === false && isSubtraction === false) {
         isDivision = true;
         memory.value = primaryValue;
-        output.value = "/"
+        output.value = "÷"
     }
 })
 
@@ -63,7 +63,7 @@ buttonMultiply.addEventListener("click", () => {
     if (primaryValue.length > 0 && isAddition === false && isDivision === false && isMultiplication === false && isSubtraction === false) {
         isMultiplication = true;
         memory.value = primaryValue;
-        output.value = "X"
+        output.value = "×"
     }
 })
 //decimal button, makes sure there is not already a decimal present, automatically creates a 0 before the decimal if not value is present in the selected variable, and selects the correct value to add the decimal to.
