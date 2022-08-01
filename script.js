@@ -72,11 +72,11 @@ decimalButton.addEventListener("click", () => {
         secondaryValue = secondaryValue + ".";
         output.value = secondaryValue;
         console.log(secondaryValue.length)
-    } else if (secondaryValue.length = "0" && primaryValue.length > 0 && secondaryValue.includes(".") === false && (isAddition === true || isDivision === true || isMultiplication === true || isSubtraction === true)){
+    } else if (secondaryValue.length <= 0 && primaryValue.length > 0 && secondaryValue.includes(".") === false && (isAddition === true || isDivision === true || isMultiplication === true || isSubtraction === true)){
         secondaryValue = "0."; 
         output.value = secondaryValue;
         console.log(secondaryValue.length)
-    } else if (primaryValue.length = "0"  && primaryValue.includes(".") === false && (isAddition === false || isDivision === false || isMultiplication === false || isSubtraction === false) ){
+    } else if (primaryValue.length <= 0  && primaryValue.includes(".") === false && (isAddition === false || isDivision === false || isMultiplication === false || isSubtraction === false) ){
         primaryValue= "0.";
         output.value = primaryValue;
     }else if (primaryValue.length > 0 && secondaryValue.length <= 0 && primaryValue.includes(".") === false && (isAddition === false || isDivision === false || isMultiplication === false || isSubtraction === false)){
