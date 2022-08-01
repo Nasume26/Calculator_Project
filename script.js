@@ -107,7 +107,7 @@ buttonEquals.addEventListener("click", () =>{
         primaryValue = primaryValue.toString();
         secondaryValue = "";
         isDivision =false
-    } else if (primaryValue.length > 0 && secondaryValue.length > 0 && isDivision === true && (primaryValue !== "0" || secondaryValue === "0")){
+    } else if (primaryValue.length > 0 && secondaryValue.length > 0 && isDivision === true && (primaryValue === "0" || secondaryValue === "0")){
         output.value = " ERROR: Can not divide by Zero";
         memory.value= "";
         primaryValue = "";
